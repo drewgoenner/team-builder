@@ -24,7 +24,7 @@ const TeamForm = props => {
     } else {
     const newMember = {
       ...member,
-      id: Date.now()
+      key: Date.now()
     };
     props.addNewMember(newMember);
       setMember({name: "", email: "", role: ""});
