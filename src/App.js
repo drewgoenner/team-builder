@@ -2,7 +2,13 @@ import React, {useState} from 'react';
 import TeamMates from './components/TeamMates';
 import TeamForm from './components/TeamForm';
 import data from './data';
+import styled from 'styled-components';
 import './App.css';
+
+const Team = styled.h1`
+color: blue;
+background-color: green;
+`;
 
 
 function App() {
@@ -22,7 +28,7 @@ function App() {
   return (
     
     <div className="App">
-      <h1>Team Members</h1>
+      <Team>Team Members</Team>
       <TeamForm addNewMember={addNewMember} editMember={editMember} memberToEdit={memberToEdit}/>
       <TeamMates teamList={members} setMemberToEdit={setMemberToEdit} memberToEdit={memberToEdit} />
     </div>

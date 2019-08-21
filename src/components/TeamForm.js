@@ -1,4 +1,9 @@
 import React, { useState, useEffect } from "react";
+import styled from 'styled-components';
+
+const FormArea = styled.div`
+background-color: #ADFF2F;
+`;
 
 const TeamForm = props => {
 
@@ -26,9 +31,8 @@ const TeamForm = props => {
 }
   }
 
-  
-
   return (
+    <FormArea>
     <form onSubmit ={submitForm}>
       <label htmlFor="name">Member Name</label>
       <input 
@@ -56,6 +60,7 @@ const TeamForm = props => {
       />
       <button type ="submit">Add Member</button>
     </form>
+    </FormArea>
   );
 };
 
